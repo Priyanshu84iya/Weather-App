@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>        <div class="weather-app">
+            <h1>Weather App</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Enter city name..." id="city-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn" title="Use your current location"><i class="fas fa-location-arrow"></i></button>
+            </div>
+            
+            <div class="weather-info" id="weather-info">
+                <div class="city-name">
+                    <h2 id="city">--</h2>
+                    <p id="date">--</p>
+                </div>
+                
+                <div class="weather-display">
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" id="weather-icon">
+                    <h1 id="temperature">--°C</h1>
+                    <h3 id="weather-condition">--</h3>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <p class="detail-label">Humidity</p>
+                            <p id="humidity">--%</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p class="detail-label">Wind Speed</p>
+                            <p id="wind-speed">-- km/h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5-day forecast section -->
+                <div class="forecast-section" id="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-container" id="forecast-container">
+                        <!-- Forecast items will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Multiple cities section -->
+            <div class="saved-cities-section">
+                <h3>Saved Cities</h3>
+                <div class="saved-cities-container" id="saved-cities-container">
+                    <!-- Saved cities will be displayed here -->
+                </div>
+                <button id="add-city-btn" class="add-city-btn">
+                    <i class="fas fa-plus"></i> Add Current City
+                </button>
+            </div>
+            
+            <div class="error" id="error-message">
+                <p><i class="fas fa-exclamation-circle"></i> City not found, please check spelling and try again.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
