@@ -87,6 +87,41 @@ This application uses the OpenWeatherMap API. To use your own API key:
    const apiKey = "YOUR_API_KEY_HERE";
    ```
 
+## 🔒 Security Setup
+
+Before running the application, you need to configure your API key securely:
+
+### 1. Get Your API Key
+- Visit [OpenWeatherMap](https://openweathermap.org/api)
+- Sign up for a free account
+- Generate your API key
+
+### 2. Configure the Application
+```bash
+# Copy the example configuration file
+cp config.example.js config.js
+```
+
+### 3. Add Your API Key
+- Open `config.js` in your editor
+- Replace `YOUR_API_KEY_HERE` with your actual OpenWeatherMap API key
+- Save the file
+
+### 4. Important Security Notes
+- ⚠️ **Never commit `config.js` to git** - it contains your private API key
+- ✅ The `config.js` file is already included in `.gitignore`
+- ✅ Only commit `config.example.js` which doesn't contain real keys
+- 🔄 Share `config.example.js` with other developers as a template
+
+### 5. File Structure
+```
+Weather App/
+├── config.js          # 🔒 Your private config (gitignored)
+├── config.example.js   # 📝 Template for other developers
+├── .gitignore          # 🛡️ Protects sensitive files
+└── ...
+```
+
 ## 🎨 Customization
 
 - **Change Default City**: Modify the default city in `script.js`
